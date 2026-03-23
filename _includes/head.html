@@ -1,43 +1,126 @@
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+ <meta charset="utf-8">
 
-<!-- Favicon -->
-{% include seo.html %}
-<!-- Favicons -->
-<link rel="icon" type="image/x-icon" href="{{site.favicon}}" title="Ohh Snap! {{site.location}} Photo Booth Favicon">
-<link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/assets/favicon/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-<link rel="manifest" href="/assets/favicon/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+<!-- Viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<!-- SEO meta tags -->
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
 
-<!-- Libs CSS -->
-<link rel="stylesheet" href="/assets/css/libs.bundle.css" />
-<!-- Theme CSS -->
-<link rel="stylesheet" href="/assets/css/theme.bundle.css" />
-<link rel="stylesheet" href="/assets/css/custom.css" />
-<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.2/default/snipcart.css" />
-<link rel="stylesheet" href="https://use.typekit.net/atv7ulw.css">
-<!-- Fonts -->
-<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700&family=Roboto+Slab:wght@100;400;700;900&family=Roboto:wght@400;500;700&display=swap%7CMaterial+Icons" />
+<!-- Import Google font (Inter) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet" id="google-font">
 
-<link href="/assets/fonts/kit-b89107202e-web/css/fontawesome.css" rel="stylesheet" />
-<link href="/assets/fonts/kit-b89107202e-web/css/brands.css" rel="stylesheet" />
-<link href="/assets/fonts/kit-b89107202e-web/css/solid.css" rel="stylesheet" />
-<link href="/assets/fonts/kit-b89107202e-web/css/sharp-thin.css" rel="stylesheet" />
-<link href="/assets/fonts/kit-b89107202e-web/css/duotone.css" rel="stylesheet" />
-<link href="/assets/fonts/kit-b89107202e-web/css/sharp-duotone-thin.css" rel="stylesheet" />
+<!-- Font icons -->
+<link rel="stylesheet" href="assets/icons/around-icons.min.css">
 
+<!-- Theme styles + Bootstrap -->
+<link rel="stylesheet" media="screen" href="assets/css/theme.css">
+<link rel="stylesheet" href="https://unpkg.com/@sjmc11/tourguidejs/dist/css/tour.min.css">
+
+<!-- Page loading styles -->
+<style>
+  .page-loading {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all .4s .2s ease-in-out;
+    transition: all .4s .2s ease-in-out;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9999;
+  }
+  [data-bs-theme="dark"] .page-loading {
+    background-color: #121519;
+  }
+  .page-loading.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .page-loading-inner {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out;
+    opacity: 0;
+  }
+  .page-loading.active > .page-loading-inner {
+    opacity: 1;
+  }
+  .page-loading-inner > span {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #6f788b;
+  }
+  [data-bs-theme="dark"] .page-loading-inner > span {
+    color: #fff;
+    opacity: .6;
+  }
+  .page-spinner {
+    display: inline-block;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-bottom: .75rem;
+    vertical-align: text-bottom;
+    background-color: #d7dde2;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-animation: spinner .75s linear infinite;
+    animation: spinner .75s linear infinite;
+  }
+  [data-bs-theme="dark"] .page-spinner {
+    background-color: rgba(255,255,255,.25);
+  }
+  @-webkit-keyframes spinner {
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    50% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  @keyframes spinner {
+    0% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    50% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+</style>
+
+<!-- Page loading scripts -->
+<script>
+  (function () {
+    window.onload = function () {
+      const preloader = document.querySelector('.page-loading')
+      preloader.classList.remove('active')
+      setTimeout(function () {
+        preloader.remove()
+      }, 1500)
+    }
+  })()
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax-video.min.js"></script>
