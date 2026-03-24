@@ -7,127 +7,250 @@ body.top{
     font-size: smaller;
     font-weight: 600;
 }
-  .tg-dialog.campus-tour-dialog {
-    background: rgba(0, 0, 0, 0.78) !important;
-    color: #fff !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    border-radius: 0 !important;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45) !important;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    max-width: 620px !important;
-  }
+.tg-dialog.campus-tour-dialog {
+  background: rgba(0, 0, 0, 0.78) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 0 !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  max-width: 620px !important;
+}
 
-  .tg-dialog.campus-tour-dialog * {
-    color: inherit;
-  }
+.tg-dialog.campus-tour-dialog * {
+  color: inherit;
+}
 
-  .tg-dialog.campus-tour-dialog .tg-dialog-header {
-    padding: 22px 24px 10px !important;
-    border-bottom: none !important;
-    background: transparent !important;
+.tg-dialog.campus-tour-dialog .tg-dialog-header {
+  padding: 22px 24px 10px !important;
+  border-bottom: none !important;
+  background: transparent !important;
+}
+
+.tg-dialog.campus-tour-dialog .tg-dialog-title {
+  margin: 0 !important;
+  color: #fff !important;
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.tg-dialog.campus-tour-dialog .tg-dialog-close {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.tg-dialog.campus-tour-dialog .tg-dialog-content {
+  padding: 8px 24px 18px !important;
+  text-align: center !important;
+  background: transparent !important;
+}
+
+.tg-dialog.campus-tour-dialog .tour-intro-copy {
+  max-width: 470px;
+  margin: 0 auto 28px;
+  color: rgba(255, 255, 255, 0.78) !important;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.tg-dialog.campus-tour-dialog .tour-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+  margin-top: 8px;
+}
+
+.tg-dialog.campus-tour-dialog .tour-split h4 {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff !important;
+}
+
+.tg-dialog.campus-tour-dialog .tour-split p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+.tg-dialog.campus-tour-dialog .tg-dialog-footer {
+  display: grid !important;
+  grid-template-columns: 1fr auto 1fr !important;
+  align-items: center !important;
+  gap: 12px !important;
+  padding: 14px 20px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  background: transparent !important;
+}
+
+.tg-dialog.campus-tour-dialog .tg-step-progress {
+  justify-self: center;
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+}
+
+.tg-dialog.campus-tour-dialog .tg-btn-prev,
+.tg-dialog.campus-tour-dialog .tg-btn-next,
+.tg-dialog.campus-tour-dialog button {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  font-size: 0.78rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  padding: 0 !important;
+}
+
+.tg-dialog.campus-tour-dialog .tg-btn-prev {
+  justify-self: start;
+}
+
+.tg-dialog.campus-tour-dialog .tg-btn-next {
+  justify-self: end;
+}
+
+/* =========================
+   Compact dialog variation
+   Add this class in addition to campus-tour-dialog:
+   campus-tour-dialog campus-tour-dialog--compact
+   ========================= */
+
+.tg-dialog.campus-tour-dialog.campus-tour-dialog--compact {
+  width: 255px !important;
+  max-width: 255px !important;
+  min-width: 255px !important;
+  background: rgba(0, 0, 0, 0.92) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.tg-dialog.campus-tour-dialog.campus-tour-dialog--compact::after {
+  content: "";
+  position: absolute;
+  top: 58px;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid rgba(0, 0, 0, 0.92);
+}
+
+.tg-dialog.campus-tour-dialog.campus-tour-dialog--compact .tg-dialog-header {
+  padding: 14px 14px 0 !important;
+  min-height: 24px !important;
+}
+
+.tg-dialog.campus-tour-dialog.campus-tour-dialog--compact .tg-dialog-title {
+  display: none !important;
+}
+
+.tg-dialog.campus-tour-dialog.campus-tour-dialog--compact .tg-dialog-close {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  width: 20px !important;
+  height: 20px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-size: 22px !important;
+  line-height: 20px !important;
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.tg-dialog.campus-tour-dialog.campus-tour-dialog--compact .tg-dialog-close:hover {
+  color: #fff !important;
+}
+
+.tg-dialog.campus-tour-dialog.campus-tour-dialog--compact .tg-dialog-content {
+  padding: 52px 14px 18px !important;
+  min-height: 170px !important;
+  text-align: left !important;
+}
+
+.tg-dialog.campus-tour-dialog.campus-tour-dialog--compact .tour-item-copy {
+  margin: 0 !important;
+  color: #fff !important;
+  font-size: 15px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+  max-width: none !important;
+}
+
+.tg-dialog.campus-tour-dialog.campus-tour-dialog--compact .tg-dialog-footer {
+  gap: 0 !important;
+  padding: 12px 14px !important;
+  min-height: 42px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.16) !important;
+}
+
+.tg-dialog.campus-tour-dialog.campus-tour-dialog--compact .tg-step-progress {
+  color: #fff !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+}
+
+.tg-dialog.campus-tour-dialog.campus-tour-dialog--compact .tg-btn-prev,
+.tg-dialog.campus-tour-dialog.campus-tour-dialog--compact .tg-btn-next {
+  font-size: 0 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+.tg-dialog.campus-tour-dialog.campus-tour-dialog--compact .tg-btn-prev::before {
+  content: "‹";
+  font-size: 34px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tg-dialog.campus-tour-dialog.campus-tour-dialog--compact .tg-btn-next::before {
+  content: "›";
+  font-size: 34px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.8);
+}
+.tg-dialog .tg-arrow {
+position: absolute;
+background: #161819 !important;
+width: 9px;
+height: 9px;
+border-radius: 1px;
+transform: rotate(45deg);
+}
+.tg-backdrop{
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 1px 0px, rgba(0, 0, 0, 0.45) 0px 0px 0px 1000vh !important;
+    border: none !important;
+    width: 0 !important;
+}
+.tg-dialog.campus-tour-dialog.campus-tour-dialog--compact .tg-btn-prev:hover::before,
+.tg-dialog.campus-tour-dialog.campus-tour-dialog--compact .tg-btn-next:hover::before {
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .tg-dialog.campus-tour-dialog .tour-split {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .tg-dialog.campus-tour-dialog .tg-dialog-title {
-    margin: 0 !important;
-    color: #fff !important;
-    font-size: 2rem !important;
-    font-weight: 700 !important;
-    line-height: 1.1 !important;
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    font-size: 1.55rem !important;
   }
-
-  .tg-dialog.campus-tour-dialog .tg-dialog-close {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    color: rgba(255, 255, 255, 0.8) !important;
-  }
-
-  .tg-dialog.campus-tour-dialog .tg-dialog-content {
-    padding: 8px 24px 18px !important;
-    text-align: center !important;
-    background: transparent !important;
-  }
-
-  .tg-dialog.campus-tour-dialog .tour-intro-copy {
-    max-width: 470px;
-    margin: 0 auto 28px;
-    color: rgba(255, 255, 255, 0.78) !important;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  .tg-dialog.campus-tour-dialog .tour-split {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-    align-items: start;
-    margin-top: 8px;
-  }
-
-  .tg-dialog.campus-tour-dialog .tour-split h4 {
-    margin: 0 0 10px;
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: #fff !important;
-  }
-
-  .tg-dialog.campus-tour-dialog .tour-split p {
-    margin: 0;
-    font-size: 0.92rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.72) !important;
-  }
-
-  .tg-dialog.campus-tour-dialog .tg-dialog-footer {
-    display: grid !important;
-    grid-template-columns: 1fr auto 1fr !important;
-    align-items: center !important;
-    gap: 12px !important;
-    padding: 14px 20px !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
-    background: transparent !important;
-  }
-
-  .tg-dialog.campus-tour-dialog .tg-step-progress {
-    justify-self: center;
-    color: rgba(255, 255, 255, 0.92) !important;
-    font-size: 0.9rem !important;
-    font-weight: 600 !important;
-  }
-
-  .tg-dialog.campus-tour-dialog .tg-btn-prev,
-  .tg-dialog.campus-tour-dialog .tg-btn-next,
-  .tg-dialog.campus-tour-dialog button {
-    background: transparent !important;
-    border: 0 !important;
-    box-shadow: none !important;
-    color: #fff !important;
-    font-size: 0.78rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.08em !important;
-    text-transform: uppercase !important;
-    padding: 0 !important;
-  }
-
-  .tg-dialog.campus-tour-dialog .tg-btn-prev {
-    justify-self: start;
-  }
-
-  .tg-dialog.campus-tour-dialog .tg-btn-next {
-    justify-self: end;
-  }
-
-  @media (max-width: 640px) {
-    .tg-dialog.campus-tour-dialog .tour-split {
-      grid-template-columns: 1fr;
-      gap: 18px;
-    }
-
-    .tg-dialog.campus-tour-dialog .tg-dialog-title {
-      font-size: 1.55rem !important;
-    }
-  }
+}
