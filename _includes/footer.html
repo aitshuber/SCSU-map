@@ -1,0 +1,47 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tg = new tourguide.TourGuideClient({
+      dialogClass: 'campus-tour-dialog',
+      backdropColor: 'rgba(0,0,0,.45)',
+      showStepProgress: true,
+      showStepDots: false,
+      closeButton: true,
+      nextLabel: 'Next >',
+      prevLabel: '<',
+      finishLabel: 'Finish',
+      steps: [
+        {
+          title: ' Welcome',
+          content:`
+            <p class="tour-intro-copy text-center">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+            </p>
+           <div class="tour-split d-flex">
+                         <div class="row">
+                             <div class="d-flex w-50">
+                             <div class="text-end">
+                              <h4>Left button</h4>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                              </div>
+                             <img src="assets/img/left.svg" class="img-fluid" style="width: 3em;margin: 0px 10px;">
+
+                         </div>
+
+                         <div class="d-flex w-50">
+                          <img src="assets/img/right.svg" class="img-fluid" style="width: 3em;margin: 0px 10px;">
+                          <div>
+                          <div>
+                           <h4>Right button</h4>
+                           <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+          `
+        }
+      ]
+    });
+
+    tg.start();
+  });
+</script>

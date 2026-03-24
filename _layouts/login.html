@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<head>
+{% include head.html %}
+</head>
+<body class="top">
+
+    <!-- NAVBAR -->
+
+   <!-- Page loading spinner -->
+   <div class="page-loading active">
+     <div class="page-loading-inner">
+       <div class="page-spinner"></div>
+       <span>Loading...</span>
+     </div>
+   </div>
+
+   <!-- Page content -->
+   <main class="page-wrapper">
+    {{ content }}
+   </main>
+
+    <!-- JAVASCRIPT -->
+    {% include scripts.html %}
+  </body>
+</html>

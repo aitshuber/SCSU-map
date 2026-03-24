@@ -81,7 +81,7 @@
   --ar-gray-400: #d7dde2;
   --ar-gray-500: #b4bbc3;
   --ar-gray-600: #858c97;
-  --ar-gray-700: #576071;
+  --ar-gray-700: #c3c3c3;
   --ar-gray-800: #434a57;
   --ar-gray-900: #121519;
   --ar-primary: #8b2f3d;
@@ -101,12 +101,12 @@
   --ar-light-rgb: 255, 255, 255;
   --ar-dark-rgb: 18, 21, 25;
   --ar-primary-text-emphasis: #336a58;
-  --ar-secondary-text-emphasis: #576071;
+  --ar-secondary-text-emphasis: #c3c3c3;
   --ar-success-text-emphasis: #2ea875;
   --ar-info-text-emphasis: #2e66a8;
   --ar-warning-text-emphasis: #e8bd22;
   --ar-danger-text-emphasis: #e82222;
-  --ar-light-text-emphasis: #576071;
+  --ar-light-text-emphasis: #c3c3c3;
   --ar-dark-text-emphasis: #121519;
   --ar-primary-bg-subtle: #ecf4f1;
   --ar-secondary-bg-subtle: #f6f9fc;
@@ -134,7 +134,7 @@
   --ar-body-font-size: 1rem;
   --ar-body-font-weight: 400;
   --ar-body-line-height: 1.5;
-  --ar-body-color: #576071;
+  --ar-body-color: #c3c3c3;
   --ar-body-color-rgb: 87, 96, 113;
   --ar-body-bg: #fff;
   --ar-body-bg-rgb: 255, 255, 255;
@@ -156,7 +156,7 @@
   --ar-link-hover-color-rgb: 55, 113, 93;
   --ar-link-hover-decoration: none;
   --ar-code-color: #e3116c;
-  --ar-highlight-color: #576071;
+  --ar-highlight-color: #c3c3c3;
   --ar-highlight-bg: #fff3cd;
   --ar-border-width: 1px;
   --ar-border-style: solid;
@@ -215,12 +215,12 @@
   --ar-light-bg-subtle: #121519;
   --ar-dark-bg-subtle: #030304;
   --ar-primary-border-subtle: #142a23;
-  --ar-secondary-border-subtle: #576071;
+  --ar-secondary-border-subtle: #c3c3c3;
   --ar-success-border-subtle: #133d2b;
   --ar-info-border-subtle: #13263d;
   --ar-warning-border-subtle: #473d18;
   --ar-danger-border-subtle: #471818;
-  --ar-light-border-subtle: #576071;
+  --ar-light-border-subtle: #c3c3c3;
   --ar-dark-border-subtle: #434a57;
   --ar-heading-color: #fff;
   --ar-link-color: #8fbaac;
@@ -7332,6 +7332,10 @@ textarea.form-control-lg {
   border: var(--ar-border-width) dashed #d6dfe8 !important;
 }
 
+.border-radius-0 {
+  border-radius: 0 !important;
+}
+
 .border-0 {
   border: 0 !important;
 }
@@ -14024,7 +14028,7 @@ html:not([dir=rtl]) .range-slider-ui.noUi-horizontal .noUi-handle {
   --ar-btn-color: #434a57 !important;
   --ar-btn-hover-color: #121519 !important;
   --ar-btn-active-color: #121519 !important;
-  --ar-btn-disabled-color: #576071;
+  --ar-btn-disabled-color: #c3c3c3;
 }
 
 [class^=btn-outline-],
@@ -14042,7 +14046,7 @@ html:not([dir=rtl]) .range-slider-ui.noUi-horizontal .noUi-handle {
   --ar-btn-border-color: #d7dde2;
   --ar-btn-hover-border-color: #d7dde2;
   --ar-btn-active-border-color: #d7dde2;
-  --ar-btn-disabled-color: #576071;
+  --ar-btn-disabled-color: #c3c3c3;
   --ar-btn-disabled-border-color: #e3e9ef;
 }
 

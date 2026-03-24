@@ -8,6 +8,7 @@ body.top{
     font-weight: 600;
 }
 .tg-dialog.campus-tour-dialog {
+  z-index: 10150 !important;
   background: rgba(0, 0, 0, 0.78) !important;
   color: #fff !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
@@ -253,4 +254,83 @@ transform: rotate(45deg);
   .tg-dialog.campus-tour-dialog .tg-dialog-title {
     font-size: 1.55rem !important;
   }
+}
+.campus-map {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* or whatever height you want */
+  background-image: url('/assets/img/campus-map.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Hotspot base */
+.hotspot {
+  position: absolute;
+  transform: translate(-50%, -100%); /* centers marker tip */
+  cursor: pointer;
+}
+
+/* Marker styling */
+.hotspot-inner img {
+  width: 30px;
+  height: auto;
+}
+
+/* Optional pulse effect */
+/* .hotspot-inner::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: rgba(220, 53, 69, 0.4);
+  border-radius: 50%;
+  top: 14px;
+  left: 15px;
+  transform: translate(-50%, -50%);
+  animation: pulse 2s infinite;
+} */
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+}
+.popover{
+  background-color: #000000c2 !important;
+  border: none !important;
+  width: 13em !important;
+  padding: 4px !important;
+
+}
+.popover:before{
+  border: #363839 !important;
+}
+.popover-header{
+  text-align: center !important;
+  color: white !important;
+  font-size: small !important;
+  border-bottom-color: transparent !important;
+  padding-bottom: 2px !important;
+  font-weight: 600
+}
+.popover-body{
+  text-align: center;
+  padding-bottom: 12px !important;
+  font-size: smaller;
+  padding: 0px;
+}
+.bs-popover-start > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=left] > .popover-arrow::after, .bs-popover-end > .popover-arrow::after, .bs-popover-auto[data-popper-placement^=right] > .popover-arrow::after{
+  border-left-color: #000000c2 !important;
+  border-right-color: #000000c2 !important;
+}
+.bs-popover-start > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=left] > .popover-arrow::before, .bs-popover-end > .popover-arrow::before, .bs-popover-auto[data-popper-placement^=right] > .popover-arrow::before{
+  border-left-color: #000000c2 !important;
+  border-right-color: #000000c2 !important;
 }
