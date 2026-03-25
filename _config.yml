@@ -104,6 +104,8 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
+  - csv
+  - base64
 exclude:
     - .jekyll-cache/
     - gemfiles/
