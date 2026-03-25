@@ -83,7 +83,7 @@ defaults:
     path: "_posts/blog"
     type: posts
   values:
-    permalink: "/ohh-snap-blog/:title"
+    permalink:
     layout: post
 assets:
   cdn:
