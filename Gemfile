@@ -30,8 +30,6 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 group :jekyll_plugins do
     gem 'jekyll-feed'
-    gem 'csv'
-    gem 'base64'
     gem 'jekyll-sitemap'
     gem 'jekyll-paginate'
     gem 'jekyll-seo-tag'
