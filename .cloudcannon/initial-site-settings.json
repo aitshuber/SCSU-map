@@ -3,7 +3,7 @@
   "mode": "hosted",
   "build": {
     "hugoVersion": "0.157.0",
-    "rubyVersion": "3.4.8",
+    "rubyVersion": "3.3.10",
     "nodeVersion": "22",
     "denoVersion": "2.7.1",
     "environment_variables": [
@@ -19,8 +19,8 @@
     "output_path": "_site",
     "build_command": "bundle exec jekyll build",
     "preserved_paths": ".bundle_cache/",
-    "preserveOutput": true,
+    "preserveOutput": false,
     "install_command": "bundle install",
-    "includeGit": true
+    "includeGit": false
   }
 }
