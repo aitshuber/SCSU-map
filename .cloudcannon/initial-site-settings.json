@@ -20,6 +20,7 @@
     "build_command": "bundle exec jekyll build",
     "preserved_paths": ".bundle_cache/",
     "preserveOutput": true,
-    "install_command": "bundle install"
+    "install_command": "bundle install",
+    "includeGit": true
   }
 }
