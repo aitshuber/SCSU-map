@@ -334,3 +334,14 @@ transform: rotate(45deg);
   border-left-color: #000000c2 !important;
   border-right-color: #000000c2 !important;
 }
+.drawer{
+  backdrop-filter: blur(20px);
+  height: 10em !important;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* left: 10px; */
+  margin: 0px;
+  padding: 0px;
+  background-color: #ffffff36;
+}
