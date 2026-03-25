@@ -99,11 +99,6 @@ assets:
 # Permalinks
 permalink: pretty
 plugins:
-  #- jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-archives
   - csv
   - base64
 exclude:
