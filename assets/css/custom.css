@@ -3,6 +3,7 @@ body.top{
     padding-bottom: 6px;
     background-color: #8b2f3d;
 }
+
 .menu{
     font-size: smaller;
     font-weight: 600;
@@ -255,28 +256,6 @@ transform: rotate(45deg);
     font-size: 1.55rem !important;
   }
 }
-.campus-map {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* or whatever height you want */
-  background-image: url('/assets/img/campus-map.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Hotspot base */
-.hotspot {
-  position: absolute;
-  transform: translate(-50%, -100%); /* centers marker tip */
-  cursor: pointer;
-}
-
-/* Marker styling */
-.hotspot-inner img {
-  width: 30px;
-  height: auto;
-}
 
 /* Optional pulse effect */
 /* .hotspot-inner::after {
@@ -334,14 +313,100 @@ transform: rotate(45deg);
   border-left-color: #000000c2 !important;
   border-right-color: #000000c2 !important;
 }
-.drawer{
-  backdrop-filter: blur(20px);
-  height: 10em !important;
-  position: absolute;
-  bottom: 0;
+html,
+body {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  /* left: 10px; */
-  margin: 0px;
-  padding: 0px;
-  background-color: #ffffff36;
+  height: 100%;
+  overflow: hidden;
+}
+
+body.walkthrough-page {
+  overflow: hidden;
+}
+
+.walkthrough-screen {
+  position: relative;
+  width: 100vw;
+  height: 100dvh;
+  overflow: hidden;
+  background: #000;
+}
+
+.campus-map {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* Real image, not background image */
+.campus-map-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Override Around's default hotspot sizing/visuals */
+.hotspots .hotspot {
+  position: absolute;
+  z-index: 5;
+  width: auto;
+  height: auto;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  display: block;
+  transform: translate(-50%, -100%);
+}
+
+.hotspots .hotspot-inner {
+  width: auto;
+  height: auto;
+  background: transparent;
+  border-radius: 0;
+  display: block;
+}
+
+/* your custom pin */
+.map-marker {
+  display: block;
+  width: 34px;
+  height: auto;
+  max-width: none;
+}
+
+/* your path marker */
+.path-marker {
+  display: block;
+  width: 42px;
+  height: auto;
+  max-width: none;
+}
+.hotspots .hotspot:hover .hotspot-inner, .hotspots .hotspot:focus .hotspot-inner{
+  background-color: transparent !important;
+}
+.hotspot:focus,
+.hotspot:hover,
+.hotspot:focus-visible,
+.hotspot:active {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Keep drawer above map */
+.drawer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
 }
