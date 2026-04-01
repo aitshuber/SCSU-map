@@ -11,37 +11,56 @@
       finishLabel: 'Finish',
       steps: [
         {
-          title: ' Welcome',
-          content:`
+          title: 'Welcome',
+          content: `
             <p class="tour-intro-copy text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
             </p>
-           <div class="tour-split d-flex">
-                         <div class="row">
-                             <div class="d-flex w-50">
-                             <div class="text-end">
-                              <h4>Left button</h4>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                              </div>
-                             <img src="assets/img/left.svg" class="img-fluid" style="width: 3em;margin: 0px 10px;">
+            <div class="tour-split d-flex">
+              <div class="row">
+                <div class="d-flex w-50">
+                  <div class="text-end">
+                    <h4>Left button</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                  <img src="assets/img/left.svg" class="img-fluid" style="width: 3em; margin: 0 10px;">
+                </div>
 
-                         </div>
-
-                         <div class="d-flex w-50">
-                          <img src="assets/img/right.svg" class="img-fluid" style="width: 3em;margin: 0px 10px;">
-                          <div>
-                          <div>
-                           <h4>Right button</h4>
-                           <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                           </div>
-                         </div>
-                       </div>
-                     </div>
+                <div class="d-flex w-50">
+                  <img src="assets/img/right.svg" class="img-fluid" style="width: 3em; margin: 0 10px;">
+                  <div>
+                    <h4>Right button</h4>
+                    <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           `
         }
       ]
     });
 
-    tg.start();
+    function setDialogSizeClass() {
+      const dialog = document.querySelector('.tg-dialog');
+      if (!dialog) return;
+
+      dialog.classList.add('campus-tour-dialog');
+
+      if (tg.activeStep > 0) {
+        dialog.classList.add('campus-tour-dialog--compact');
+      } else {
+        dialog.classList.remove('campus-tour-dialog--compact');
+      }
+    }
+
+    tg.onAfterStepChange(async () => {
+      setDialogSizeClass();
+      await tg.updatePositions();
+    });
+
+    tg.start().then(() => {
+      setDialogSizeClass();
+      tg.updatePositions();
+    });
   });
 </script>
