@@ -359,9 +359,10 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
   display: block;
+  background-image: linear-gradient(to bottom, #60aed8, #929292);
 }
 
 .hotspot {
