@@ -49,7 +49,7 @@ permalink: /walkthrough
 
 
 
-      <div class="hotspot" style="top: 75%; left: 47%;">
+      <div class="hotspot" style="top: 72%; left: 47%;">
         <div class="hotspot-card">
           <strong>Street Level</strong>
           <span>Exploration</span>
@@ -70,7 +70,7 @@ permalink: /walkthrough
       </div>
 
       <div class="hotspot hotspot-path"
-           style="top:75.5%; left: 46%;">
+           style="top:71.5%; left: 46%;">
         <div class="hotspot-inner">
           <img src="/assets/img/path.svg" alt="Street view path" class="w-100"  data-tg-tour="Whenever you see a blue circle, tap one to enter street view and see the campus from the ground">
         </div>
@@ -96,3 +96,19 @@ permalink: /walkthrough
   </div>
      </div>
 </section>
+
+<script>
+(function () {
+  function scaleMap() {
+    var el = document.querySelector('.campus-map');
+    if (!el) return;
+    var scale = Math.min(window.innerWidth / 1280, window.innerHeight / 800);
+    el.style.transform = 'scale(' + scale + ')';
+    el.style.left = ((window.innerWidth  - 1280 * scale) / 2) + 'px';
+    el.style.top  = ((window.innerHeight - 800  * scale) / 2) + 'px';
+  }
+  window.addEventListener('resize', scaleMap);
+  document.addEventListener('DOMContentLoaded', scaleMap);
+  scaleMap();
+})();
+</script>

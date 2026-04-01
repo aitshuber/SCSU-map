@@ -350,8 +350,9 @@ body {
 
 .campus-map {
   position: absolute;
-  inset: 0;
-  overflow: hidden;
+  width: 1280px;
+  height: 800px;
+  transform-origin: top left;
 }
 
 .campus-map-image {
@@ -448,26 +449,14 @@ body {
 }
 @media (max-width: 767.98px) {
   .walkthrough-screen {
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
   }
 
   .campus-map {
-    position: relative;
-    width: 1200px;
-    min-width: 1200px;
-    height: 100dvh;
-  }
-
-  .campus-map-image {
-    object-fit: cover;
-  }
-
-  .hotspot-layer {
     position: absolute;
-    inset: 0;
-    transform: translateY(115px);
+    width: 1280px;
+    height: 800px;
+    min-width: unset;
   }
 }
 @media (max-width: 991.98px) {
